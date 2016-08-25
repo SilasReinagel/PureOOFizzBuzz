@@ -12,8 +12,8 @@ and [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.h
  2. not a single `public` `static` method ([why they are bad?](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html))
  3. not a single mutable class ([why they are bad?](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html))
  4. not a single `instanceof` keyword, type casting, or reflection ([why?](http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html))
- 5. not a single 'getter' or 'setter' ([why?]http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html)
- 6. not a single 'new' outside of secondary constructors
+ 5. not a single `getter` or `setter` ([why?](http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html))
+ 6. not a single `new` outside of secondary constructors
  7. not a single Java primitive
  
 ## Usage
