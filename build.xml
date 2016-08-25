@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="oo.pure.fizzbuzz" default="test" basedir=".">
+	<property name="srcDir" value = "${basedir}/src"/>
+	<property name="testDir" value = "${basedir}/tests"/>
+    <property name="buildDir" value="${basedir}/bin/"/>
+    <property name="buildOutDir" value="${buildDir}/"/>
+    <property name="testOutDir" value="${buildDir}/"/>
+	
+	<path id="src.path">    
+		<pathelement path="${srcDir}"/>
+	</path>
+	
+	<path id="compile.path">
+		<path refid="src.path"/>
+		<fileset dir="lib/">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+	<path id="unit.test.path">
+		<path refid="compile.path"/>
+		<pathelement path="${testDir}"/>
+	</path>
+	
+	<target name="init">	    
+		<delete dir="${buildDir}"/>
+	</target>
+
+	<target name="compile" depends="init">
+        <mkdir dir="${buildOutDir}"/>
+        <javac srcdir="${srcDir}" 
+				destdir="${buildOutDir}"
+				includeantruntime="false"/>
+    </target>
+	
+	<target name="compileUnitTests" depends="compile">	
+		<mkdir dir="${testOutDir}"/>
+		<javac srcdir="${testDir}" 
+			destdir="${testOutDir}"
+			includeantruntime="false"
+			classpathref="unit.test.path">
+		</javac>		
+	</target>
+
+	<target name="test" depends="compileUnitTests">
+        <junit printsummary="yes" fork="true" haltonfailure="yes">
+            <classpath>
+                <pathelement location="${testOutDir}"/>
+                <fileset dir="${basedir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+            <batchtest todir="${testOutDir}">
+                <fileset dir="${testOutDir}">
+                    <include name="**/*Tests*.class"/>
+                </fileset>
+                <formatter type="plain"/>
+				<formatter type="plain" usefile="false"/>
+            </batchtest>
+        </junit>
+	</target>	
+</project>
