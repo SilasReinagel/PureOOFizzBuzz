@@ -1,4 +1,4 @@
-# LiteJavaJson
+# PureOOFizzBuzz
 
 [![Build Status](https://travis-ci.org/TheoConfidor/PureOOFizzBuzz.svg?branch=master)](https://travis-ci.org/TheoConfidor/PureOOFizzBuzz)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
@@ -22,21 +22,21 @@ FizzBuzz values cannot be accessed directly. Instead they can be printed to any 
 
 You can implement `Media` however you like. 
 
-Print to Collection Usage
+####Print to Collection Usage
 ```
 TextCollection media = new TextCollection();
 new FizzBuzz(100).print(media);
 Collection<String> stringValues = media.strings();
 ```
 
-Print Range to Collection Usage
+####Print Range to Collection Usage
 ```
 TextCollection media = new TextCollection();
 new FizzBuzz(15, 50).print(media);
 Collection<String> stringValues = media.strings();
 ```
 
-Print to Console Usage
+####Print to Console Usage
 
 ```
 new FizzBuzz(100).print(new SystemConsole());
