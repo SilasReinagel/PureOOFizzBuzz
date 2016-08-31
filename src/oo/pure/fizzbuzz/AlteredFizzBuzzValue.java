@@ -24,18 +24,23 @@ public abstract class AlteredFizzBuzzValue implements FizzBuzzValue
     @Override
     public final Integer intValue()
     {
-        return _transformation.apply(_value).intValue();
+        return transform().intValue();
     }
 
     @Override
     public final String text()
     {
-        return _transformation.apply(_value).text();
+        return transform().text();
     }
 
     @Override
     public final void print(final Media media)
     {
-        _transformation.apply(_value).print(media);
+        transform().print(media);
+    }
+
+    private FizzBuzzValue transform()
+    {
+        return _transformation.apply(_value);
     }
 }

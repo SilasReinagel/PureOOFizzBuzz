@@ -8,7 +8,7 @@ public interface FizzBuzzValue extends IntValue, Text
 {
     final class Raw implements FizzBuzzValue
     {
-        private final IntValue _Whole_numberValue;
+        private final IntValue _intValue;
         private final Text _stringValue;
 
         public Raw(final IntValue wholeNumberValue)
@@ -18,14 +18,14 @@ public interface FizzBuzzValue extends IntValue, Text
 
         public Raw(final IntValue wholeNumberValue, final Text stringValue)
         {
-            _Whole_numberValue = wholeNumberValue;
+            _intValue = wholeNumberValue;
             _stringValue = stringValue;
         }
 
         @Override
         public Integer intValue()
         {
-            return _Whole_numberValue.intValue();
+            return _intValue.intValue();
         }
 
         @Override
