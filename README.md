@@ -6,7 +6,7 @@
 This project was inspired by [Elegant Objects by Yegor Bugayenko](https://www.amazon.com/Elegant-Objects-1-Yegor-Bugayenko/dp/1519166915)
 
 **PureOOFizzBuzz** is a [true object-oriented](http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
-and [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html) Java8 demo. Its key benefits, comparing to all others, include these four fundamental principles:
+and [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html) Java8 demo. Its key benefits, comparing to all others, include these seven fundamental principles:
 
  1. not a single `null` ([why NULL is bad?](http://www.yegor256.com/2014/05/13/why-null-is-bad.html))
  2. not a single `public` `static` method ([why they are bad?](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html))
