@@ -1,6 +1,6 @@
 # PureOOFizzBuzz
 
-[![Build Status](https://travis-ci.org/TheoConfidor/PureOOFizzBuzz.svg?branch=master)](https://travis-ci.org/TheoConfidor/PureOOFizzBuzz)
+[![Build Status](https://travis-ci.org/SilasReinagel/PureOOFizzBuzz.svg?branch=master)](https://travis-ci.org/SilasReinagel/PureOOFizzBuzz)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 This project was inspired by [Elegant Objects by Yegor Bugayenko](https://www.amazon.com/Elegant-Objects-1-Yegor-Bugayenko/dp/1519166915)
